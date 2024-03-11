@@ -24,26 +24,21 @@
                             <p class="selling-price">Rs: {{ $product->price }}</p>
                             <!-- Quantity controls -->
                             <div class="quantity-controls">
-                              <p>Quantity :</p>
+                                <p>Quantity :</p>
                                 <button class="quantity-btn" onclick="decrementQuantity({{ $product->id }})">-</button>
                                 <span class="quantity" id="quantity_{{ $product->id }}">1</span>
                                 <button class="quantity-btn" onclick="incrementQuantity({{ $product->id }})">+</button>
                             </div>
-                          
-                            <div>
-                            <!-- Add to Cart button -->
-                            <form action="{{ route('addToCart', ['productId' => $product->id]) }}" method="POST">
-                              @csrf
-                            <button type="submit" class="btn btn-warning">Add to Cart</button>
-                            </form>
 
-                            
-                            <!-- <button class="btn btn-warning" onclick="addToCart({{ $product->id }})">Add to Cart</button> -->
-                            <!-- Buy Now button -->
-                            <a href="{{ route('checkout', ['productId' => $product->id]) }}" class="btn btn-primary">Buy Now</a>
-                            <!-- <button class="btn btn-primary" onclick="buyNow({{ $product->id }})">Buy Now</button> -->
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <!-- Add to Cart button -->
+                                <form action="{{ route('addToCart', ['productId' => $product->id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-warning">Add to Cart</button>
+                                </form>
+                                <!-- Buy Now button -->
+                                <a href="{{ route('checkout', ['productId' => $product->id]) }}" class="btn btn-primary">Buy Now</a>
                             </div>
-                          
                         </div>
                     </div>
                 </div>
@@ -69,18 +64,6 @@
             var quantityElement = document.getElementById('quantity_' + productId);
             var quantity = parseInt(quantityElement.innerText);
             quantityElement.innerText = quantity + 1;
-        }
-
-        function addToCart(productId) {
-            var quantity = document.getElementById('quantity_' + productId).innerText;
-            // Handle adding product to cart with quantity
-            alert('Product added to cart: ' + productId + ', Quantity: ' + quantity);
-        }
-
-        function buyNow(productId) {
-            var quantity = document.getElementById('quantity_' + productId).innerText;
-            // Handle buying product now with quantity
-            alert('Buying product now: ' + productId + ', Quantity: ' + quantity);
         }
     </script>
 @endsection

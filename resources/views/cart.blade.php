@@ -29,6 +29,6 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('checkout') }}" class="btn btn-primary">Buy Now</a>
+       <center><a href="{{ route('checkout') }}" class="btn btn-primary">Buy Now</a></center> 
     </div>
 @endsection
