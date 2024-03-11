@@ -37,7 +37,8 @@
                                     <button type="submit" class="btn btn-warning">Add to Cart</button>
                                 </form>
                                 <!-- Buy Now button -->
-                                <a href="{{ route('checkout', ['productId' => $product->id]) }}" class="btn btn-primary">Buy Now</a>
+                                
+                                <a href="{{ route('buy', ['productId' => $product->id]) }}" class="btn btn-primary">Buy Now</a>
                             </div>
                         </div>
                     </div>

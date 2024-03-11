@@ -34,6 +34,15 @@ Route::post('/add-to-cart/{productId}', [App\Http\Controllers\CartController::cl
 Route::delete('/cart/{cartId}', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('removeFromCart');
 
 
+Route::get('/thankyou', function () {
+    return view('thankyou');
+})->name('thankyou');
+
+
+Route::post('/place-order', [App\Http\Controllers\OrderController::class, 'placeOrder'])->name('placeOrder');
+
+Route::get('/buy/{productId}',[App\Http\Controllers\ProductController::class, 'showProductDetails'])->name('buy');
+
 // Route::get('/create',[ContactController::class,'create']);
 // Route::post('/store',[ContactController::class,'store']);
 // Route::get('/index',[ContactController::class,'index']);

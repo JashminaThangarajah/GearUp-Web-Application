@@ -32,22 +32,23 @@
                 <!-- Customer Details -->
                 <h3>Customer Details</h3>
                 <!-- Customer Details Form -->
-                <form>
+                <form method="POST" action="{{ route('placeOrder') }}">
+                    @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
                     </div>
                     <!-- Add more form fields for customer details as needed -->
                     <button type="submit" class="btn btn-primary">Proceed to Checkout</button>
@@ -56,3 +57,4 @@
         </div>
     </div>
 @endsection
+
