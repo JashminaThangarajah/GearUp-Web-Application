@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Cart;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderPlaced;
 
 class OrderController extends Controller
 {
@@ -39,8 +41,10 @@ class OrderController extends Controller
         // You can implement this based on your cart implementation
         // For example, if you're using session-based cart, you can clear it like this:
         // $request->session()->forget('cart');
-
+        Mail::to($validatedData['email'])->send(new OrderPlaced($order));
+     
         // Redirect the user or perform any other action
         return redirect()->route('thankyou')->with('success', 'Order placed successfully!');
+       
     }
 }

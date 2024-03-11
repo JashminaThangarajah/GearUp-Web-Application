@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'GearUp Store') }}</title>
+  <center><title>{{ config('app.name', 'GearUp Store') }}</title></center>  
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-            <center> <b><span class="navbar-brand" style="font-size: 30px; color: #004085;">GearUp Store</span></b>
+            <center> <b><span class="navbar-brand" style="font-size: 30px; color: #004085;">GearUp Store</span></b></center>
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'GearUp Store') }}
                 </a>
