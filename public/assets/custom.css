@@ -1,4 +1,15 @@
 /* css/app.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+body{
+	line-height:1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding: 0;
+ }
+
+ 
 
 /* Body style */
 body {
@@ -64,4 +75,93 @@ body {
 .error-message {
     color: #dc3545;
     margin-top: 5px;
+}
+
+
+/* Add your CSS styles here */
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ede4e4;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .product-card-img {
+    position: relative;
+}
+
+.product-card .stock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.product-card .product-card-body {
+    margin-top: 10px;
+}
+
+.product-card .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-card .product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-card .selling-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745; /* Green color for selling price */
+}
+
+.product-card .btn-primary {
+    background-color: #007bff; /* Blue color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.product-card .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #ddd;
 }

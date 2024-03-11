@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products');
+Route::get('/checkout/{productId}', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+Route::get('/cart/{productId}', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 
 
 // Route::get('/create',[ContactController::class,'create']);
