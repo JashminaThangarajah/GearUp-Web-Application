@@ -1,0 +1,66 @@
+/* css/app.css */
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #e6f5e6; /* Light green background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header */
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #008000; /* Green header color */
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button */
+.btn-primary {
+    background-color: #008000; /* Green button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #006400; /* Darker green color on hover */
+}
+
+/* Error message */
+.error-message {
+    color: #dc3545;
+    margin-top: 5px;
+}
