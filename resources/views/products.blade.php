@@ -32,7 +32,12 @@
                           
                             <div>
                             <!-- Add to Cart button -->
-                            <a href="{{ route('cart', ['productId' => $product->id]) }}" class="btn btn-warning">Add to Cart</a>
+                            <form action="{{ route('addToCart', ['productId' => $product->id]) }}" method="POST">
+                              @csrf
+                            <button type="submit" class="btn btn-warning">Add to Cart</button>
+                            </form>
+
+                            
                             <!-- <button class="btn btn-warning" onclick="addToCart({{ $product->id }})">Add to Cart</button> -->
                             <!-- Buy Now button -->
                             <a href="{{ route('checkout', ['productId' => $product->id]) }}" class="btn btn-primary">Buy Now</a>

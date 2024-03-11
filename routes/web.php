@@ -25,7 +25,13 @@ Route::get('/', function () {
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products');
 Route::get('/checkout/{productId}', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
-Route::get('/cart/{productId}', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+Route::get('/checkout', [App\Http\Controllers\CartController::class, 'index'])->name('checkout');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'view'])->name('checkout');
+
+
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
+Route::post('/add-to-cart/{productId}', [App\Http\Controllers\CartController::class, 'addToCart'])->name('addToCart');
+Route::delete('/cart/{cartId}', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('removeFromCart');
 
 
 // Route::get('/create',[ContactController::class,'create']);

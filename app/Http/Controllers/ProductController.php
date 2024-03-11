@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product; // Import the Product model
-
+use App\Models\CartItems;
 
 class ProductController extends Controller
 {
